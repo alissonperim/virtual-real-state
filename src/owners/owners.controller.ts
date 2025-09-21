@@ -22,7 +22,8 @@ export class OwnersController {
 
   @Get()
   findAll() {
-    return this.ownersService.findAll();
+    return 'Owner got with success';
+    // return this.ownersService.findAll();
   }
 
   @Get(':id')
