@@ -19,7 +19,8 @@
       "@properties/*": ["./src/properties/*"],
       "@addresses/*": ["./src/addresses/*"],
       "@banks-accounts/*": ["./src/banks-accounts/*"],
-      "@shared/*": ["./src/shared/*"]
+      "@shared/*": ["./src/shared/*"],
+      "@users/*": ["./src/users/*"]
     },
     "incremental": true,
     "skipLibCheck": true,

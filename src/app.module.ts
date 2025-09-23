@@ -5,9 +5,10 @@ import { OwnersModule } from './owners/owners.module';
 import { AddressesModule } from './addresses/addresses.module';
 import { PropertiesModule } from './properties/properties.module';
 import { BanksAccountsModule } from './banks-accounts/banks-accounts.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
-  imports: [OwnersModule, AddressesModule, PropertiesModule, BanksAccountsModule],
+  imports: [OwnersModule, AddressesModule, PropertiesModule, BanksAccountsModule, UsersModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -1,6 +1,11 @@
 export enum MaritalStatus {
-  married = 'married',
-  widowed = 'widowed',
-  divorced = 'divorced',
-  single = 'single',
+  MARRIED = 'MARRIED',
+  WIDOWED = 'WIDOWED',
+  DIVORCED = 'DIVORCED',
+  SINGLE = 'SINGLE',
+}
+
+export enum OwnerType {
+  USER = 'USER',
+  COMPANY = 'COMPANY',
 }
