@@ -1,59 +1,60 @@
-import { States, Domain, ResidenceType } from '../../shared';
-import { Entity, Column } from 'typeorm';
+import { ResidenceType, States } from '@shared/address'
+import { Domain } from '@shared/domain'
+import { Entity, Column } from 'typeorm'
 
 @Entity()
 export class Address extends Domain {
   @Column({
     type: 'varchar',
-    length: 64
+    length: 64,
   })
-  street!: string;
+  street!: string
 
   @Column({
     type: 'varchar',
-    length: 64
+    length: 64,
   })
-  neighborhood!: string;
+  neighborhood!: string
 
   @Column({
     type: 'varchar',
-    length: 24
+    length: 24,
   })
-  city!: string;
+  city!: string
 
   @Column({
     type: 'enum',
-    enum: States
+    enum: States,
   })
-  state!: States;
+  state!: States
 
   @Column({
     type: 'varchar',
-    length: 64
+    length: 64,
   })
-  complement!: string;
+  complement!: string
 
   @Column({
     type: 'varchar',
-    length: 8
+    length: 8,
   })
-  postalCode!: string;
+  postalCode!: string
 
   @Column({
     type: 'varchar',
-    length: 4
+    length: 4,
   })
-  country!: string;
+  country!: string
 
   @Column({
     type: 'varchar',
-    length: 5
+    length: 5,
   })
-  number!: string;
+  number!: string
 
   @Column({
     type: 'enum',
-    enum: ResidenceType
+    enum: ResidenceType,
   })
-  residenceType!: ResidenceType;
+  residenceType!: ResidenceType
 }

@@ -1,37 +1,38 @@
-import { Address } from '../../addresses/entities/address.entity';
-import { Entity, Column, ManyToMany, OneToOne, JoinColumn } from 'typeorm';
-
-export enum MaritalStatus {
-  married = 'married',
-  widowed = 'widowed',
-  divorced = 'divorced',
-  single = 'single',
-}
+import { Property } from '@properties/entities/property.entity'
+import { Address } from '@addresses/entities/address.entity'
+import { Entity, Column, ManyToMany, OneToOne, JoinColumn } from 'typeorm'
+import { BanksAccount } from '@banks-accounts/entities/banks-account.entity'
+import { Domain } from '@shared/domain'
+import { MaritalStatus } from '@shared/owner'
 
 @Entity()
-export class Owner {
+export class Owner extends Domain {
   @Column()
-  name!: string;
+  name!: string
 
   @Column()
-  lastName!: string;
+  lastName!: string
 
   @Column()
-  docoument!: string;
+  document!: string
 
   @OneToOne(() => Address)
-  address!: Address;
+  address!: Address
 
   @Column({
     type: 'enum',
     enum: MaritalStatus,
   })
-  maritalStatus!: string;
+  maritalStatus!: string
 
   @Column()
-  birthDate!: Date;
+  birthDate!: Date
 
-  @ManyToMany(() => Property)
+  @ManyToMany(() => Property, (property) => property.owners)
   @JoinColumn()
-  properties!: Property[];
+  properties!: Property[]
+
+  @OneToOne(() => BanksAccount)
+  @JoinColumn()
+  bankAccount!: BanksAccount
 }

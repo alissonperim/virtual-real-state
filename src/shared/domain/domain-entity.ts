@@ -3,30 +3,30 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   PrimaryColumn,
-  UpdateDateColumn
-} from 'typeorm';
+  UpdateDateColumn,
+} from 'typeorm'
 
 export class Domain {
   @PrimaryColumn({
     type: 'varchar',
-    length: 30
+    length: 30,
   })
-  id!: string;
+  id!: string
 
   @CreateDateColumn({
     default: new Date(),
-    nullable: false
+    nullable: false,
   })
-  createdAt!: Date;
+  createdAt!: Date
 
   @UpdateDateColumn()
-  updatedAt!: Date;
+  updatedAt!: Date
 
   @DeleteDateColumn()
-  deletedAt!: Date;
+  deletedAt!: Date
 
   @Column({
-    type: 'boolean'
+    type: 'boolean',
   })
-  active!: boolean;
+  active!: boolean
 }

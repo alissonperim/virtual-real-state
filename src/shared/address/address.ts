@@ -24,10 +24,10 @@ export enum States {
   SC = 'SC',
   SP = 'SP',
   SE = 'SE',
-  TO = 'TO'
+  TO = 'TO',
 }
 
 export enum ResidenceType {
   HOUSE = 'HOUSE',
-  APARTMENT = 'APARTMENT'
+  APARTMENT = 'APARTMENT',
 }
