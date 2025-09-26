@@ -20,6 +20,9 @@
       "@addresses/*": ["./src/addresses/*"],
       "@banks-accounts/*": ["./src/banks-accounts/*"],
       "@shared/*": ["./src/shared/*"],
+      "@insurancies/*": ["./src/insurancies/*"],
+      "@real-state-agencies/*": ["./src/real-state-agencies/*"],
+      "@rental-contracts/*": ["./src/rental-contracts/*"],
       "@users/*": ["./src/users/*"]
     },
     "incremental": true,

@@ -23,6 +23,7 @@ export class Owner extends Domain {
   type!: OwnerType
 
   @OneToOne(() => Address)
+  @JoinColumn()
   address!: Address
 
   @Column({
